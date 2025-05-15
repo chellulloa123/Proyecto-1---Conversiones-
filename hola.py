@@ -50,3 +50,20 @@ def ventana_conversion(titulo, texto, funcion):
 
     boton = tk.Button(v, text="Convertir", command=convertir)
     boton.pack()
+
+    def principal():
+    root = tk.Tk()
+    root.title("Conversor Básico")
+
+    tk.Label(root, text="Elige la conversión que necesitas:").pack()
+
+    tk.Button(root, text="Metros a Kilómetros", command=lambda: ventana_conversion("Metros a Km", "Escribe metros:", metros_a_km)).pack()
+    tk.Button(root, text="Pulgadas a Metros", command=lambda: ventana_conversion("Pulgadas a Metros", "Escribe pulgadas:", pulgadas_a_metros)).pack()
+    tk.Button(root, text="Kilogramos a Gramos", command=lambda: ventana_conversion("Kg a Gramos", "Escribe kilogramos:", kg_a_gramos)).pack()
+    tk.Button(root, text="Libras a Kilogramos", command=lambda: ventana_conversion("Libras a Kg", "Escribe libras:", libras_a_kg)).pack()
+    tk.Button(root, text="Segundos a Minutos", command=lambda: ventana_conversion("Segundos a Minutos", "Escribe segundos:", segundos_a_minutos)).pack()
+    tk.Button(root, text="Horas a Días", command=lambda: ventana_conversion("Horas a Días", "Escribe horas:", horas_a_dias)).pack()
+
+    root.mainloop()
+
+principal()
